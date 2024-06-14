@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+header{
+    background-color: #5f27cd;
+    padding: 16px 0; /*espaçamento pra cima e pra baixo de 16px e de 0 pras laterais*/
+    color: #fff;
+    display: flex; /*colocou o texto e o botao do header na horizontal, um do lado do outro*/
+    border-bottom: #341f97 solid 16px;/*borda inferior*/
+    justify-content: center; /*trouxe o texto e o botao do header pro centro*/
+    text-transform: uppercase; /*deu um tamanho maior ao texto*/
+    font-style: italic; /*estilo italico aplicado ao texto*/
+}
+
+header button{
+    margin-left: 16px; /*margem entre o botao e o texto. margem lado direito*/
+}
+
+form{
+    background-color: #c8d6e5;
+    padding: 24px 0; /*espaçamento pra cima e pra baixo de 24px e de 0 pras laterais*/
+    text-align: center; /*centarlizou o texto da página, e junto foram os botoes tambem*/
+    display: none; /*sumir o formulario*/
+}
+
+form h2{
+    margin-bottom: 16px; /*margem inferior*/
+}
+
+input,
+button{
+    padding: 8px;/*internamente o texto do input e button ficaram mais espaçados*/
+}
+
+button{
+    background-color: #009432;
+    border: none; /*retiramos a borda dos botoes*/
+    font-weight: bold; /*espessura da fonte negrito*/
+    text-transform: uppercase; /*deu um tamanho maior ao texto*/
+    color: #fff;
+    cursor: pointer; /*cursor do mouse ao ser passado pelos butoes foi trocado da seta pela maozinha*/
+
+}
+
+#botao-cancelar{
+    background-color: red;
+}
+
+ul{
+    display: flex;/*colocou o texto e o botao do header na horizontal, um do lado do outro*/
+    flex-wrap: wrap; /*quando chegar no limite irá criar uma nova linha*/
+}
+
+ul li{
+    max-width: 25%; /*como tem 3 elementos li em uma linha a largura tem que ser 25%*/
+    list-style: none; /*tira o estilo padrao da lista,removendo assim as marcaçoes padroes*/
+    position: relative; /*como adicionamos um position absolute aos links das imagens, para que eles fiquem presos a sua imagem de origem devemos informar colocando o position relative*/
+    max-height: 280px; /*limmitando a altura do LI*/
+    overflow-y: hidden;
+}
+
+ul li img{
+    width: 100%; /*diz que as imagens tem que se alinhar 100% dentro do espaço delimitado para cada li*/
+}
+
+.image-link{
+    padding: 16px;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute; /*posicionando no canto inferior do li*/
+    bottom: 0; /* para ficar na extremidade */
+    left: 0;
+    width: 100%; /*vai ocupar 100% do li*/
+    opacity: 0; /*ocultando a frase do link da tela da imagem para poder conficurar o hover pra aparecer apenas quando passar o mouse*/
+    transition: all ease .5s;  /*adicionou uma transição ao passar o mouse de meio segundo*/
+}
+
+.image-link a{
+    color: #fff;
+    text-decoration: none; /*tiramdo o efeito de link padrao*/
+}
+
+ul li:hover .image-link{
+    opacity: 1; /*ao passar o mouse sobre a imagem, a frase do link aparece novamente. completando oque configuramos em image-link*/
+}
